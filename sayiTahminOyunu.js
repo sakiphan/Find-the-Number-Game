@@ -1,10 +1,5 @@
 "use strict";
 
-document.querySelector(".mesaj"); //index.html'den ""<p class="mesaj">Start guessing...</p>"" kod satirini döndürmüs olduk. cünkü bu satirin sinifi ".mesaj" //
-document.querySelector(".mesaj").textContent; // textContent yazarak bu kod satirinin text kismini döndürdük. //
-
-// Fonksiyonlar //
-
 const textDegistir = function (hedefText, yeniMesaj) {
   document.querySelector(hedefText).textContent = yeniMesaj;
 };
@@ -33,8 +28,10 @@ document.querySelector(".yenile1").addEventListener("click", function () {
   textDegistir(".skor", 100);
   bodyStyleDegistir("#222");
   numStyleDegistir("15rem", "6rem");
-  dogruSayi = Math.floor(Math.random() * 20) + 1;
+  dogruSayi = Math.floor(Math.random() * 101);
   document.querySelector(".tahmin1").value = "";
+  let tavansayi = 100;
+  let tabansayi = 1;
 });
 
 let tavansayi = 100;
